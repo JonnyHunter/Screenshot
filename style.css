@@ -5,21 +5,22 @@
     .blog-view-all {
         text-align: right;
         position: absolute;
-        top: 30px;
+        top: 34px;
         right: 10px;
-        text-shadow: 1px 1px 1px grey;
     }
 
         .blog-view-all-link {
             text-transform: uppercase;
             color: black;
             text-decoration: none;
+            letter-spacing: 0.05em;
         }
 
         .blog-title{
             margin-bottom: 1em;
             text-align: center;
             font-weight: 300;
+            font-size: 36px;
         }
 
             .blog-title:after {
@@ -32,24 +33,16 @@
             }
 
 .blog-item {
-    overflow: auto;
     border-top: 1px solid #A98F6D;
     padding: 3px;
 }
 
-    .blog-item-title,
-    .blog-item-date,
-    .blog-item-excerpt,
-    .blog-item-more {
-        width: calc(100% - 320px);
-        float: right;
-    }
-
 
     .blog-item-title {
-
+        margin: 0;
+        margin-bottom: 0.5em;
+        font-size: 24px;
     }
-    
 
     .blog-item-image {
         position: static;
@@ -61,15 +54,17 @@
         text-transform: uppercase;
         font-size: 12px;
     }
-
+ 
     .blog-item-excerpt {
-        float: center;
+        font-size: 18px;
+        margin-top: .5em; 
     }
 
-    .blog-item-more {
+    .blog-item-more { 
         text-transform: uppercase;
         color: black;
         text-decoration: none;
+        font-size: 14px;
     }
 
     /* Add chevrons to links */
@@ -84,3 +79,71 @@
         border-width: .1em .1em 0 0;
         transform: rotate(45deg) translateY(-.05em);
     }
+
+@media screen and (max-width: 727px){
+    .blog-item-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 728px){
+    .blog-item {
+        overflow: auto;
+    }
+
+        .blog-item-title,
+        .blog-item-date,
+        .blog-item-excerpt,
+        .blog-item-more {
+            width: calc(100% - 320px);
+            float: right;
+        }
+
+}
+
+@media screen and (min-width: 1025px){
+
+}
+
+
+    @media screen and (min-width: 320px) and (max-width: 480px){
+        .blog {
+            width: 460px;
+        }
+        .blog-item-title{
+            position: relative;
+            font-size: 20px;
+        }    
+        .blog-item-image{
+            
+        }   
+        .blog-item-date{
+            
+        }
+         .blog-item-excerpt {
+            
+         }   
+         .blog-item-more{
+            
+         }
+         .blog-view-all{
+             position: absolute;        
+             top: 900px;
+             right: 110px;
+             border: solid #A98F6D;
+         }
+         .blog-item-title,
+         .blog-item-date,
+         .blog-item-excerpt,
+         .blog-item-more {
+             width: calc(100% - 80px);
+
+         }
+         .blog-view-all::after {
+            content: "";
+            display: none;
+          
+         }
+
+        }
