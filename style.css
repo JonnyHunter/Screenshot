@@ -71,16 +71,33 @@
         border-width: .1em .1em 0 0;
         transform: rotate(45deg) translateY(-.05em);
     }
-
+/* Mobile*/
 @media screen and (max-width: 727px){
+    .blog-title{
+        margin-bottom: 0;
+    }
+    .blog-item{
+        position: relative;
+        padding-top: calc(55% + 12px);
+    }
     .blog-item-image {
+        position: absolute;
         width: 100%;
         height: auto;
+        top: 5px;
     }
-    .blog-view-all{
-        
-        border: solid #A98F6D;
+    .blog-view-all {
+        border: solid #A98F6D;  
+        position: absolute;
+        top: 98%; 
+        right: 33%;
     }
+    
+    .blog-view-all::after {
+        display: none;
+    }
+    
+    
 }
 
 @media screen and (min-width: 728px){
